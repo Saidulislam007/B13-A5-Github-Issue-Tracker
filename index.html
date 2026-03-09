@@ -132,7 +132,7 @@
                 <div class="flex items-center gap-3 min-w-0">
                     <div
                         class="bg-indigo-100 rounded-full text-primary p-2 h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-circle-dot text-sm sm:text-base"></i>
+                        <img src="/assets/Aperture.png" alt="">
                     </div>
 
                     <div class="min-w-0">
@@ -165,6 +165,61 @@
 
             <div id="issuesGrid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 "></div>
         </main>
+    </div>
+
+
+    <!-- issue details modal -->
+
+    <div id="issueModal"
+        class="hidden fixed items-center justify-center inset-0 bg-slate-900/50 backdrop-blur-sm z-50  p-4">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-2xl overflow-hidden transform transition-all">
+            <div class="p-6">
+                <h2 id="modalTitle" class="text-2xl font-bold mb-2 text-slate-800"></h2>
+                
+                <div class="flex items-center text-sm mb-4 gap-2">
+                    <span id="modalStatus" class="px-3 rounded-full py-0.5 text-white font-bold text-xs"></span>
+                    <span class="text-slate-400">•</span>
+                    <span class="text-slate-500">Opened by
+                        <span id="modalAuthor" class="font-semibold text-slate-700"></span></span>
+                    <span class="text-slate-400">•</span>
+                    <span id="modalDate" class="text-slate-500"></span>
+                </div>
+
+                <div id="modalLabels" class="flex flex-wrap gap-2 mb-6"></div>
+
+                <div class="mb-6">
+                    <p class="text-[11px] font-bold text-slate-400 uppercase mb-2">
+                        Description
+                    </p>
+                    <div id="modalDesc"
+                        class="bg-slate-50 text-slate-600  p-4 rounded-lg border border-slate-100 text-sm leading-relaxed">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 p-4 bg-slate-50/50 rounded-lg border border-slate-100">
+                    <div>
+                        <p class="text-slate-400 text-[10px] font-bold uppercase mb-1">
+                            Assignee
+                        </p>
+                        <p id="modalAssignee" class="font-bold text-slate-800"></p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 text-[10px] font-bold uppercase mb-1">
+                            Priority Level
+                        </p>
+                        <span id="modalPriority"
+                            class="px-3 py-1 rounded font-bold text-[10px] text-white inline-block"></span>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-end">
+                    <button onclick="closeModal()"
+                        class="bg-indigo-600  text-white px-8 py-2 rounded-lg font-bold transition-all hover:bg-indigo-700">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
